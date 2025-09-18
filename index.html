@@ -5,96 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spritle - Términos y Privacidad</title>
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #111; /* Fondo oscuro */
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            background: #111; 
             color: #f5f5f5;
         }
         header {
-            background: #f5c400; /* Amarillo principal */
-            color: #111;
-            padding: 20px 40px;
-            text-align: center;
-            font-size: 1.8em;
+            background: #fdd835; 
+            color: #111; 
+            padding: 15px 30px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+        }
+        header img {
+            height: 40px;
+        }
+        nav a {
+            margin: 0 15px; 
+            text-decoration: none; 
+            color: #111; 
             font-weight: bold;
-            letter-spacing: 2px;
+        }
+        nav a:hover {
+            color: #444;
         }
         .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: #1c1c1c; /* Caja gris oscuro */
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+            max-width: 900px; 
+            margin: 40px auto; 
+            background: #1c1c1c; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            animation: fadeIn 1s ease-in-out;
         }
-        h1 {
-            color: #f5c400;
-            border-left: 5px solid #f5c400;
-            padding-left: 10px;
-            margin-top: 30px;
+        h1, h2 {
+            color: #fdd835;
         }
         p {
-            line-height: 1.7;
-            margin: 15px 0;
-            color: #ddd;
+            line-height: 1.6;
+        }
+        .btn {
+            display: inline-block;
+            margin: 10px 10px 20px 0;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        .btn-yellow {
+            background: #fdd835; 
+            color: #111;
+        }
+        .btn-yellow:hover {
+            background: #c6a700;
+        }
+        .btn-dark {
+            background: #333; 
+            color: #fff;
+        }
+        .btn-dark:hover {
+            background: #555;
         }
         footer {
-            text-align: center;
-            padding: 15px;
-            background: #000;
-            color: #f5c400;
-            margin-top: 40px;
-            font-size: 0.9em;
+            text-align: center; 
+            padding: 20px; 
+            margin-top: 40px; 
+            background: #000; 
+            color: #888;
         }
-        footer a {
-            color: #f5c400;
-            text-decoration: none;
-            margin: 0 8px;
-        }
-        footer a:hover {
-            text-decoration: underline;
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        ⚡ SPRITLE - Información Legal ⚡
+        <div style="display:flex; align-items:center;">
+            <img src="https://ibb.co/DH3h3Xwz" alt="Spritle Logo"> <!-- Pon aquí el logo de Spritle -->
+            <h2 style="margin-left: 10px;">Spritle</h2>
+        </div>
+        <nav>
+            <a href="#about">Inicio</a>
+            <a href="#tos">Términos</a>
+            <a href="#privacy">Privacidad</a>
+            <a href="#contact">Soporte</a>
+        </nav>
     </header>
 
-    <div class="container">
-        <h1>Términos de Servicio</h1>
-        <p>
-            Al usar <b>Spritle</b>, aceptas que su uso es únicamente con fines de entretenimiento 
-            y gestión dentro de servidores de Discord. 
-            Nos reservamos el derecho de modificar o actualizar estos términos en cualquier momento. 
-            Si continúas usando el servicio, significa que aceptas dichos cambios.
-        </p>
-        <p>
-            No nos hacemos responsables por daños o pérdidas derivados del uso del bot. 
-            Se recomienda usarlo de manera responsable y acorde a las reglas de Discord.
-        </p>
+    <!-- Sección Acerca -->
+    <section class="container" id="about">
+        <h1> Bienvenido a Spritle</h1>
+        <p>Spritle es un bot para Discord diseñado para mejorar tu servidor con herramientas útiles, comandos divertidos y una experiencia confiable. 
+        Aquí podrás consultar nuestros términos de servicio y política de privacidad.</p>
+        <a href="#" class="btn btn-yellow">Invitar Spritle</a>
+        <a href="https://discord.gg/MMzdEFgkZE" class="btn btn-dark">Servidor de Soporte</a>
+    </section>
 
-        <h1>Política de Privacidad</h1>
-        <p>
-            <b>Spritle</b> valora tu privacidad. El bot únicamente puede almacenar datos básicos 
-            (como ID de usuario o servidor) necesarios para su funcionamiento. 
-            No recopilamos información personal sensible sin consentimiento.
-        </p>
-        <p>
-            No compartiremos tus datos con terceros salvo que sea requerido por la ley. 
-            Esta política puede actualizarse en cualquier momento para reflejar cambios en el servicio.
-        </p>
-        <p>
-            📅 Última actualización: Septiembre 2025
-        </p>
-    </div>
+    <!-- Términos -->
+    <section class="container" id="tos">
+        <h1> Términos de Servicio</h1>
+        <p>Estos son los términos de uso de Spritle. Al invitar y usar el bot en tu servidor, aceptas seguir nuestras normas y condiciones.</p>
+    </section>
 
+    <!-- Privacidad -->
+    <section class="container" id="privacy">
+        <h1> Política de Privacidad</h1>
+        <p>En Spritle respetamos tu privacidad. No compartimos información con terceros y solo guardamos lo necesario para el correcto funcionamiento del bot.</p>
+    </section>
+
+    <!-- Contacto -->
+    <section class="container" id="contact">
+        <h1>📩 Contacto</h1>
+        <p>Si tienes dudas o necesitas ayuda, puedes unirte a nuestro <a href="https://discord.gg/MMzdEFgkZE" style="color:#fdd835;">Servidor de Soporte</a> 
+        o escribirnos al correo: <b>soportespritle@gmail.com</b></p>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        © 2025 Spritle | 
-        <a href="#">Términos de Servicio</a> | 
-        <a href="#">Política de Privacidad</a>
+        <p>© <span id="year"></span> Spritle. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        // Año dinámico en el footer
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
